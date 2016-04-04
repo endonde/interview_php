@@ -15,11 +15,7 @@ function append_item($root, $value)
 
 function create_sorted_linked_list($numbers)
 {
-  $root = null;
-  foreach ($numbers as $number) {
-    $root = append_item($root, $number);
-  }
-  return $root;
+  return null;
 }
 
 function run($numbers)
