@@ -11,17 +11,6 @@ $sub_strings = array_slice($command_params, 1);
 
 function is_substring($haystack, $needle)
 {
-  $j = 0;
-  for ($i = 0; $i < strlen($haystack) - strlen($needle) + 1; ++$i) {
-    while ($needle[$j] == $haystack[$i + $j]) {
-      $j ++;
-      if ($j == strlen($needle)) {
-        return true;
-      }
-    }
-  }
-
-  return false;
 }
 
 function run($haystack, $sub_strings)

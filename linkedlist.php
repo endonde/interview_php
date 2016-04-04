@@ -10,16 +10,6 @@ $numbers = array_slice($argv, 1);
 
 function append_item($root, $value)
 {
-  $node = new Node($value, null);
-  if (!$root) {
-    return $node;
-  }
-  $tail = $root;
-  while ($tail->right) {
-    $tail = $tail->right;
-  }
-  $tail->right = $node;
-  return $root;
 }
 
 function create_linked_list($numbers)

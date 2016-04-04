@@ -11,26 +11,6 @@ $numbers = array_slice($argv, 1);
 
 function append_item($root, $value)
 {
-  $node = new Node($value, null);
-  if (!$root) {
-    return $node;
-  }
-
-  if ($root->value > $value) {
-    $node->right = $root;
-    return $node;
-  }
-
-  $prev = null;
-  $temp = $root;
-  while ($temp && $temp->value < $value) {
-    $prev = $temp;
-    $temp = $temp->right;
-  }
-
-  $prev->right = $node;
-  $node->right = $temp;
-  return $root;
 }
 
 function create_sorted_linked_list($numbers)
